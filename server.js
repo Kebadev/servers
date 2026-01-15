@@ -9,8 +9,8 @@ let servers = db.getCollection('servers') || db.addCollection('servers');
 
 // 2. إعداد البوت
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-const TOKEN = 'حط_توكن_بوتك_هنا';
-const CLIENT_ID = 'حط_آي_دي_البوت_هنا';
+const TOKEN = 'MTQzNDE2NjQ2NzA0OTI5NTg3Mg.GsFH2V.WdSQ5xpz_JQN9JPDgXlCRx14N_9GRpS0977YYM';
+const CLIENT_ID = '1434166467049295872';
 
 // 3. أمر السلاش لإضافة سيرفر
 const commands = [

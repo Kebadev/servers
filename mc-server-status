@@ -1,0 +1,19 @@
+const util = require('minecraft-server-util');
+
+async function getServerData(ip, port = 25565) {
+    try {
+        const result = await util.status(ip, port);
+        return {
+            online: true,
+            version: result.version.name,
+            playersOnline: result.players.online,
+            maxPlayers: result.players.max,
+            motd: result.motd.clean 
+        };
+    } catch (error) {
+        return { online: false, message: "السيرفر مغلق حالياً" };
+    }
+}
+
+// مثال للاستخدام:
+getServerData('play.hypixel.net').then(data => console.log(data));

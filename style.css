@@ -1,0 +1,67 @@
+:root {
+    --bg-color: #0d0e12;
+    --card-bg: rgba(25, 28, 35, 0.8);
+    --primary: #5865F2; /* لون ديسكورد */
+    --accent: #43b581;  /* لون أونلاين */
+    --text: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at top, #1a1c24 0%, #0d0e12 100%);
+    color: var(--text);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0; padding: 0;
+}
+
+.container { max-width: 1000px; margin: 50px auto; padding: 20px; }
+
+header h1 { font-size: 3rem; text-shadow: 0 0 20px rgba(88, 101, 242, 0.5); margin-bottom: 10px; }
+
+.server-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.server-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.server-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 15px rgba(88, 101, 242, 0.2);
+    border-color: var(--primary);
+}
+
+.status-indicator {
+    position: absolute; top: 20px; right: 20px;
+    width: 12px; height: 12px; border-radius: 50%;
+}
+
+.online { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+.offline { background: #f04747; }
+
+.ip-badge {
+    background: #111; padding: 10px; border-radius: 8px;
+    cursor: pointer; font-family: monospace; display: block; margin: 15px 0;
+    border: 1px solid #333; transition: 0.2s;
+}
+
+.ip-badge:active { transform: scale(0.95); }
+
+.discord-btn {
+    display: inline-block; width: 100%; padding: 12px;
+    background: var(--primary); color: white; text-decoration: none;
+    border-radius: 10px; font-weight: bold; text-align: center;
+    transition: 0.3s;
+}
+
+.discord-btn:hover { filter: brightness(1.2); }
